@@ -1,0 +1,23 @@
+{
+  "name": "asad-cuet/laravel-installer",
+  "description": "Laravel web installer",
+  "license": "MIT",
+  "type": "library",
+
+  "authors": [
+    {
+      "name": "Asadul Islam Hamzah",
+      "email": "u1911022@student.cuet.ac.bd"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "AsadCuet\\LaravelInstaller\\": "src/"
+    },
+    "files": [
+      "src/functions.php"
+    ]
+  },
+  "minimum-stability": "dev"
+}
