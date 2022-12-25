@@ -28,7 +28,7 @@ After updating composer, add the ServiceProvider to the providers array in `conf
 ];
 ```
 3.
-copy the isInstalled.php file from vendor/asad-cuet/laravel-installer/src/middleware/ to the app/http/middleware/
+copy the isInstalled.php file from `vendor/asad-cuet/laravel-installer/src/middleware/` to the `app/http/middleware/`
 
 4.
 add the middleware to the kernel  in `app/http/kernel.php`.
@@ -38,7 +38,7 @@ protected $routeMiddleware = [
 ];
 ```
 5.
-Set gaurd to your target routes:
+Set Route gaurd to your target Route
 
 ```
 Route::middleware(['isInstalled'])->group(function () {
@@ -82,7 +82,7 @@ composer remove asad-cuet/laravel-installer
 
 
 3.
-delete the isInstalled.php file in the app/http/middleware/
+delete the isInstalled.php file in the `app/http/middleware/`
 
 4.
 remove the middleware from the kernel  in `app/http/kernel.php`.
@@ -92,7 +92,7 @@ protected $routeMiddleware = [
 ];
 ```
 5.
-Remove route gaurd in routes file:
+Remove route gaurd from Route file:
 
 ```
 Route::middleware(['isInstalled'])->group(function () {
