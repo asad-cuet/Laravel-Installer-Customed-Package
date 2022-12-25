@@ -9,8 +9,8 @@ Laravel installer checks for the following things and install the application in
 5. Seed The Tables.
 
 ## Note:
-You need to have `.env` to the root.
-You don't need to create database or set db name in the .env file.
+1. You need to have `.env` to the root.
+2. You don't need to create database or set db name in the .env file.
 
 ## Installation
 1.
