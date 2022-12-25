@@ -12,12 +12,13 @@ Laravel installer checks for the following things and install the application in
 You need to have `.env` to the root
 
 ## Installation
+1.
 Require this package with composer:
 ```
 composer require asad-cuet/laravel-installer
 ```
 
-
+2.
 After updating composer, add the ServiceProvider to the providers array in `config/app.php`.
 
 ```
@@ -25,6 +26,25 @@ After updating composer, add the ServiceProvider to the providers array in `conf
     AsadCuet\LaravelInstaller\Providers\LaravelInstallerServiceProvider::class,
 ];
 ```
+3.
+copy the isInstalled.php file from vendor/asad-cuet/laravel-installer/src/middleware/ to the app/http/middleware/
+
+4.
+add the middleware to the kernel  in `app/http/kernel.php`.
+```
+protected $routeMiddleware = [
+    'isInstalled' => \App\Http\Middleware\isInstalled::class,
+];
+```
+5.
+Set gaurd to your target routes:
+
+```
+Route::middleware(['isInstalled'])->group(function () {
+    ..............
+});
+```
+
 
 ## Usage
 

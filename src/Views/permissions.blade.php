@@ -1,6 +1,6 @@
 @extends('vendor.installer.layouts.master')
 
-@section('title', trans('installer_messages.permissions.title'))
+@section('title', trans('Permissions'))
 @section('container')
     @if (isset($permissions['errors']))
         <div class="alert alert-danger">Please fix the below error and the click  {{ trans('installer_messages.checkPermissionAgain') }}</div>
@@ -17,7 +17,7 @@
     <div class="buttons">
         @if ( ! isset($permissions['errors']))
             <a class="button" href="{{ route('LaravelInstaller::database') }}">
-                {{ trans('installer_messages.next') }}
+                {{ trans('Next') }}
             </a>
         @else
             <a class="button" href="javascript:window.location.href='';">

@@ -1,9 +1,9 @@
 @extends('vendor.installer.layouts.master')
 
-@section('title', trans('installer_messages.welcome.title'))
+@section('title', trans('Tork Inc Installer'))
 @section('container')
-    <p class="paragraph" style="text-align: center;">{{ trans('installer_messages.welcome.message') }}</p>
+    <p class="paragraph" style="text-align: center;">{{ trans('Initaite the Software Installation') }}</p>
     <div class="buttons">
-        <a href="{{ route('LaravelInstaller::environment') }}" class="button">{{ trans('installer_messages.next') }}</a>
+        <a href="{{ route('LaravelInstaller::environment') }}" class="button">{{ trans('Start') }}</a>
     </div>
 @stop

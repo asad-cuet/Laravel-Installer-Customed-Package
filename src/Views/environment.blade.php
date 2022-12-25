@@ -1,6 +1,6 @@
 @extends('vendor.installer.layouts.master')
 
-@section('title', trans('installer_messages.environment.title'))
+@section('title', trans('Tork Inc Installer'))
 @section('style')
     <link href="{{ asset('installer/froiden-helper/helper.css') }}" rel="stylesheet"/>
     <style>
@@ -47,7 +47,7 @@
         <div class="modal-footer">
             <div class="buttons">
                 <button class="button" onclick="checkEnv();return false">
-                    {{ trans('installer_messages.next') }}
+                    {{ trans('Next') }}
                 </button>
             </div>
         </div>
