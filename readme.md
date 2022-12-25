@@ -1,9 +1,6 @@
-# Laravel Web Installer
+# Laravel Installer
 
-[![Packagist License](https://poser.pugx.org/froiden/laravel-installer/license.png)]()
-[![Total Downloads](https://poser.pugx.org/froiden/laravel-installer/d/total.png)](https://packagist.org/packages/froiden/laravel-installer)
-
-Laravel Web installer checks for the following things and install the application in one go.
+Laravel installer checks for the following things and install the application in one go.
 
 1. Check For Server Requirements.
 2. Check For Folders Permissions.
@@ -17,7 +14,7 @@ You need to have `.env` to the root
 ## Installation
 Require this package with composer:
 ```
-composer require froiden/laravel-installer
+composer require asad-cuet/laravel-installer
 ```
 
 
@@ -42,12 +39,11 @@ You will notice additional files and folders appear in your project :
  - `public/installer/assets` : This folder contains a css folder and inside it you will find a `main.css` file, this file is responsible for the styling of your installer, you can overide the default styling and add your own.
  - `resources/views/vendor/installer` : Contains the HTML code for your installer.
  - `resources/lang/en/installer_messages.php` : This file holds all the messages/text.
+ - `app/Http/Middleware/isInstalled.php` : This middlwware check wheather the application is installed or not.
 
 ## Installing your application
 - **Install:** In order to install your application, go to the `/install` url and follow the instructions.
-## Screenshots
  
-![Laravel web installer](http://public.froid.works/knap1.png)
 
-## Credits
-[RachidLaasri Installer](https://github.com/RachidLaasri/LaravelInstaller)
+
+

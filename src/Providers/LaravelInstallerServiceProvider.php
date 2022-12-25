@@ -57,11 +57,11 @@ class LaravelInstallerServiceProvider extends ServiceProvider
             __DIR__.'/../Views' => base_path('resources/views/vendor/installer'),
         ]);
 
+        // $this->publishes([
+        //     __DIR__.'/../Lang' => base_path('resources/lang'),
+        // ]);
         $this->publishes([
-            __DIR__.'/../Lang' => base_path('resources/lang'),
-        ]);
-        $this->publishes([
-            __DIR__.'/../Middleware/isInstalled' => base_path('app/Http/Middleware'),
+            __DIR__.'/../Middleware/isInstalled.php' => base_path('app/Http/Middleware'),
         ]);
     }
 }

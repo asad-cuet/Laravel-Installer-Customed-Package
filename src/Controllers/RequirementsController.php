@@ -32,8 +32,17 @@ class RequirementsController extends Controller
             config('installer.core.minPhpVersion')
         );
 
+
         $requirements = $this->requirements->check(
-            config('installer.requirements')
+            [
+                'openssl',
+                'pdo',
+                'mbstring',
+                'tokenizer',
+                'fileinfo',
+                'curl'
+            ]
+            // config('installer.requirements')
         );
 
         return view('vendor.installer.requirements', compact('requirements', 'phpSupportInfo'));

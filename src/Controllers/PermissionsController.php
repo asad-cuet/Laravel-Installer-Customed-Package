@@ -30,7 +30,13 @@ class PermissionsController extends Controller
     public function permissions()
     {
         $permissions = $this->permissions->check(
-            config('installer.permissions')
+            [
+                'storage/app/'           => '775',
+                'storage/framework/'     => '775',
+                'storage/logs/'          => '775',
+                'bootstrap/cache/'       => '775'
+            ]
+            // config('installer.permissions')
         );
 
         return view('vendor.installer.permissions', compact('permissions'));
