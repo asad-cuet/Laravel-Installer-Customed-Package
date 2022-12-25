@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\File;
 use Closure;
 use Illuminate\Http\Request;
 
-class InstallationMiddleware
+class isInstalled
 {
     /**
      * Handle an incoming request.
