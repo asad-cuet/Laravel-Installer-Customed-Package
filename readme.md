@@ -10,6 +10,7 @@ Laravel installer checks for the following things and install the application in
 
 ## Note:
 You need to have `.env` to the root
+You don't need to create database or set db name in the .env file
 
 ## Installation
 1.
@@ -61,9 +62,42 @@ You will notice additional files and folders appear in your project :
  - `resources/lang/en/installer_messages.php` : This file holds all the messages/text.
  - `app/Http/Middleware/isInstalled.php` : This middlwware check wheather the application is installed or not.
 
-## Installing your application
-- **Install:** In order to install your application, go to the `/install` url and follow the instructions.
- 
 
+## Uninstallation
+
+
+1.
+remove the ServiceProvider to the providers array in `config/app.php`.
+
+```
+'providers' => [
+    AsadCuet\LaravelInstaller\Providers\LaravelInstallerServiceProvider::class,
+];
+```
+2.
+Remove this package with composer:
+```
+composer remove asad-cuet/laravel-installer
+```
+
+
+3.
+delete the isInstalled.php file in the app/http/middleware/
+
+4.
+remove the middleware from the kernel  in `app/http/kernel.php`.
+```
+protected $routeMiddleware = [
+    'isInstalled' => \App\Http\Middleware\isInstalled::class,
+];
+```
+5.
+Remove route gaurd in routes file:
+
+```
+Route::middleware(['isInstalled'])->group(function () {
+    ..............
+});
+```
 
 
