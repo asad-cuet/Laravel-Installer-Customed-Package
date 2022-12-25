@@ -67,7 +67,7 @@ You will notice additional files and folders appear in your project :
 
 
 1.
-remove the ServiceProvider to the providers array in `config/app.php`.
+remove the ServiceProvider in the providers array in `config/app.php`.
 
 ```
 'providers' => [
