@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ trans('Tork Inc Installer') }}</title>
-    <link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-16x16.png') }}" sizes="16x16"/>
-    <link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-32x32.png') }}" sizes="32x32"/>
-    <link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-96x96.png') }}" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/tork-favicon.png') }}" sizes="96x96"/>
 
 
     <link href="{{ asset('installer/css/style.min.css') }}" rel="stylesheet"/>
@@ -17,7 +15,7 @@
 <div class="master">
     <div class="box">
         <div class="header">
-            <img src="{{ asset('/logo/knap.png') }}" height="40px" alt="">
+            <img src="{{ asset('installer/img/logo-light.png') }}" height="40px" alt="">
             <h1 class="header__title">@yield('title')</h1>
         </div>
         <ul class="step">
