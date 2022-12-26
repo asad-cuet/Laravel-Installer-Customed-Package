@@ -1,6 +1,6 @@
 <?php
     include 'functions.php';
-Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' => 'AsadCuet\LaravelInstaller\Controllers', 'middleware' => ['web', 'install']], function()
+Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' => 'AsadCuet\LaravelInstaller\Controllers', 'middleware' => ['web']], function()
 {
     Route::get('/', [
             'as' => 'welcome',

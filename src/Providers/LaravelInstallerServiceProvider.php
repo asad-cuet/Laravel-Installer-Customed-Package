@@ -5,6 +5,7 @@ namespace AsadCuet\LaravelInstaller\Providers;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 use AsadCuet\LaravelInstaller\Middleware\canInstall;
+use Illuminate\Contracts\Http\Kernel;
 
 class LaravelInstallerServiceProvider extends ServiceProvider
 {
@@ -33,9 +34,9 @@ class LaravelInstallerServiceProvider extends ServiceProvider
      * @param \Illuminate\Routing\Router $router
      * @return void
      */
-    public function boot(Router $router)
+    public function boot(Router $router,Kernel $kernel)
     {
-        $router->middlewareGroup('install', [canInstall::class]);
+        $kernel->pushMiddleware([canInstall::class]);
     }
 
     /**
